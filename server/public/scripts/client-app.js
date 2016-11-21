@@ -40,6 +40,13 @@ function postThingToDo() {
     postThing[field.name] = field.value;
   });
   postThing.status = 'incomplete';
+  // $.post('/thingsToDo', postThing);
+  //   .done(function (response) {
+  //     console.log(response);
+  //   });
+  //   .fail(function() {
+  //
+  //   });
   $.ajax({
     type: 'POST',
     url: '/thingsToDo',
